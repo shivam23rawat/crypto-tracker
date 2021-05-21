@@ -7,6 +7,7 @@ import "./App.css";
 function App() {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
+
   useEffect(() => {
     axios
       .get(
@@ -35,7 +36,7 @@ function App() {
           Search a currency
         </h1>
         <form>
-          <input type="text" list="data1" placeholder="Search" className="coin-input" onChange={handleChange}/>
+          <input type="text" list="data1" placeholder="Search" className="coin-input" onChange={handleChange} onFocus={(e)=>e.target.value=''}/>
           <datalist id="data1">
             {
               coins.map(coin=>
