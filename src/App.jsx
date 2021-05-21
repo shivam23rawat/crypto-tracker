@@ -4,12 +4,9 @@ import Coin from "./Coin";
 
 import "./App.css";
 
-//https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=100&page=1&sparkline=false
-
 function App() {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
-
   useEffect(() => {
     axios
       .get(
@@ -17,7 +14,6 @@ function App() {
       )
       .then((res) => {
         setCoins(res.data);
-        console.log(res.data);
       })
       .catch((error)=>{
         alert('An error has occurred in fetching the api')
@@ -39,7 +35,18 @@ function App() {
           Search a currency
         </h1>
         <form>
-          <input type="text" className="coin-input" placeholder="Search" onChange={handleChange} />
+          <input type="text" list="data1" placeholder="Search" className="coin-input" onChange={handleChange}/>
+          <datalist id="data1">
+            {
+              coins.map(coin=>
+                {
+                  return(
+                  <option>{coin.name}</option>
+                  )
+                })
+            }
+          </datalist>
+
         </form>
       </div>
       {filteredCoins.map(coin=>{
