@@ -5,9 +5,10 @@ This project is hosted at [Netlify](https://cryptracker.netlify.app/).
 ## Tech
 Project has been made using the following :-
 1. React
-2. Axios (Promise based HTTP client)
-3. JSX
-4. CSS 
+2. CoinGecko API
+3. Axios (Promise based HTTP client)
+4. JSX
+5. CSS 
 
 ## Building 
 Project can be run at localhost using yarn.
