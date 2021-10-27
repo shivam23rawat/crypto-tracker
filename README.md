@@ -1,6 +1,6 @@
 # Cryptocurrency Tracker Using React Hooks 
 
-This project is hosted [here](https://shivamrawat.tech/crypto-tracker/).
+This project is hosted [here](https://cryptracker.netlify.app/).
 
 ## Tech
 Project has been made using the following :-
